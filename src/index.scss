@@ -1,0 +1,75 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  background-image:
+          radial-gradient(rgba(0, 0, 0, 0.03) 5px, transparent 8px),
+          radial-gradient(rgba(0, 0, 0, 0.03) 5px, transparent 8px);
+  background-size: 12px 12px;
+  background-position: 0 0, 6px 6px;
+  font-family: 'Arial', sans-serif;
+}
+
+.banner {
+  width: 320px;
+  background: white;
+  border-radius: 270px;
+  padding: 30px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+.gallery-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #222;
+  letter-spacing: 0.3px;
+}
+
+.sber-logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #21a038;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.warning {
+  font-size: 14px;
+  color: #555;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 15px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
