@@ -38,6 +38,8 @@ const MainPage = () => {
     if (id) {
       const fullUrl = window.location.href
 
+      console.log(window.location)
+
       getImage(id)
         .then((data) => {
           const { expiresAt, createdAt, ...rest } = data as ImgInfo
@@ -49,7 +51,8 @@ const MainPage = () => {
 
           setImgInfo(newImgInfo)
           setHref(fullUrl)
-          setDownloadHref(`${import.meta.env.VITE_BASE_URL}/images/${id}`)
+          const downloadUrl = fullUrl.replace(id, '')
+          setDownloadHref(`${downloadUrl}download/${id}`)
           setId(id)
         })
         .catch((err) => parseError(err))
