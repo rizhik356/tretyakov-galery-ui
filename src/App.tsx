@@ -1,16 +1,20 @@
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
+import MainPage from './components/MainPage.tsx'
+import PrivacyPage from './components/PrivacyPage.tsx'
+import DownloadPage from './components/DownloadPage.tsx'
+
 function App() {
+  // const base = import.meta.env.BASE_URL
+
   return (
-    <>
-      <div className="banner">
-        <div className="gallery-name">Третьяковская галерея</div>
-        <div className="sber-logo">СБЕР</div>
-        <div className="warning">
-          ПЕРЕД ИСПОЛЬЗОВАНИЕМ СТЕНАЛ,
-          <br />
-          ОБЪИКОМЫТЕСЬ С ПРАВИЛАМИ
-        </div>
-      </div>
-    </>
+    <HashRouter>
+      <Routes>
+        <Route path="*" element={<Navigate to="/file" />} />
+        <Route path={'/file/:id'} element={<MainPage />} />
+        <Route path={'/file/download/:id'} element={<DownloadPage />} />
+        <Route path={'/privacy'} element={<PrivacyPage />} />
+      </Routes>
+    </HashRouter>
   )
 }
 
